@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: tennis-predictor-api
+    env: python
+    region: frankfurt
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: DATABASE_URL
+        fromDatabase:
+          name: tennis-predictor-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: false
+      - key: MINI_APP_URL
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+
+databases:
+  - name: tennis-predictor-db
+    databaseName: tennis_predictor
+    plan: free

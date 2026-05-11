@@ -1,0 +1,43 @@
+# FastAPI
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+pydantic==2.5.3
+pydantic-settings==2.1.0
+
+# Database
+sqlalchemy==2.0.25
+asyncpg==0.29.0
+alembic==1.13.1
+
+# Redis
+redis==5.0.1
+aioredis==2.0.1
+
+# Telegram
+aiogram==3.4.1
+
+# HTTP Client
+aiohttp==3.9.3
+httpx==0.26.0
+
+# ML
+scikit-learn==1.4.0
+xgboost==2.0.3
+numpy==1.26.3
+pandas==2.2.0
+
+# LLM
+openai==1.10.0
+langchain==0.1.5
+langchain-openai==0.0.5
+
+# Utils
+python-dotenv==1.0.0
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+celery==5.3.6
+pytz==2024.1
+
+# Logging
+loguru==0.7.2
